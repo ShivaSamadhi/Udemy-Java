@@ -2,7 +2,7 @@ package src;
 
 public class BankAccount {
     private String accountNumber;
-    private int balance;
+    private double balance;
     private String customerName;
     private String email;
     private String phoneNumber;
@@ -21,10 +21,10 @@ public class BankAccount {
     }
 
     //BALANCE SET/GET
-    public void setBalance(int balance) {
+    public void setBalance(double balance) {
         this.balance = balance;
     }
-    public int getBalance(){
+    public double getBalance(){
         return this.balance;
     }
 
@@ -74,11 +74,16 @@ public class BankAccount {
     }
 
     //PHONE NUMBER SET/GET
-
     public void setPhoneNumber(String phoneNumber) {
         if(phoneNumber.length() != 10){
             System.out.printf("Invalid phone number.%nTry again.");
         }
-        this.phoneNumber = phoneNumber;
+        else {
+            this.phoneNumber = phoneNumber;
+        }
+    }
+
+    public String getPhoneNumber() {
+        return this.phoneNumber;
     }
 }

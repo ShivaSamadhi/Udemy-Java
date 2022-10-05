@@ -29,12 +29,32 @@ public class OOP {
         //HERE WE ARE CALLING THE PUBLIC METHOD 'setModel' TO SET THE MODEL NAME FOR THIS INSTANCE OF THE CAR CLASS.
         //HOW THIS METHOD IS ACTUALLY IMPLEMENTED WITHIN THE CAR CLASS IS HIDDEN AND ULTIMATELY NOT IMPORTANT, AS LONG AS WE HAVE A WAY IN WHICH TO INDIRECTLY INTERFACE WITH WHATEVER INFO WE WANT TO RECEIVE OR MUTATE. THIS IS ANOTHER CORE PRINCIPLE OF OOP CALLED ABSTRACTION
 
-        System.out.printf("Model is %s", mercedes.getModel());
+        System.out.printf("Model is %s%n", mercedes.getModel());
         //HERE WE ARE CALLING THE PUBLIC METHOD 'getModel' TO GET THE MODEL NAME FOR THIS INSTANCE OF THE CAR CLASS. THEN WE PRINTING THAT INFO INTO THE TERMINAL AS A FORMATTED STRING
         //AGAIN, THEY WAY THIS IS BEING IMPLEMENTED IN THE BACKGROUND IS NOT RELEVANT. THE ONLY RELEVANT ASPECT IS THAT WE HAVE A WAY TO GET THAT INFO BACK TO US
 
+        //BANK ACCOUNT CLASS EXERCISES
+        BankAccount chase = new BankAccount();
 
+        chase.setAccountNumber("123456789");
+        System.out.println(chase.getAccountNumber());
 
+        chase.setBalance(10000.01);
+        System.out.printf("Current balance: $%s%n",chase.getBalance());
+
+        chase.depositFunds(5000.05);
+        System.out.printf("Current balance: $%s%n",chase.getBalance());
+        chase.withdrawFunds(5000.05);
+        System.out.printf("Current balance: $%s%n",chase.getBalance());
+
+        chase.setCustomerName("Ramaj Johnson");
+        System.out.printf("Account Holder: %s%n", chase.getCustomerName());
+
+        chase.setEmail("rjohnson3795@gmail.com");
+        System.out.printf("Email: %s%n", chase.getEmail());
+
+        chase.setPhoneNumber("4693891347");
+        System.out.printf("Phone Number: %s%n", chase.getPhoneNumber());
 
 
     }
