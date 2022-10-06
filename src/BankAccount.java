@@ -7,6 +7,7 @@ public class BankAccount {
     private String email;
     private String phoneNumber;
 
+
     //ACCOUNT NUMBER SET/GET
     public void setAccountNumber(String accountNumber) {
         if (accountNumber.length() != 9 ){
@@ -38,7 +39,7 @@ public class BankAccount {
     }
 
     public void withdrawFunds(double withdrawalAmount){
-        if(withdrawalAmount > this.balance || withdrawalAmount <= 0){
+        if(withdrawalAmount > this.balance || withdrawalAmount < 0){
             System.out.printf("This transaction cannot be completed.%nTry again.");
         }
         else{
