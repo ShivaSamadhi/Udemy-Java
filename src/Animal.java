@@ -7,6 +7,7 @@ public class Animal {
     private int body;
     private int size;
     private int weight;
+    //SIMILAR TO PREVIOUS EXAMPLES, PRIVATE FIELDS ARE CREATED WITHIN THE ANIMAL CLASS. THE FIELDS THAT ARE DEFINED HERE ARE SUPPOSED TO REPRESENT ATTR THAT ARE COMMON TO ALL ANIMALS AND CAN EASILY BE INHERITED BY MORE SPECIFIC SUBCLASSES.
 
     public Animal(String name, int brain, int body, int size, int weight) {
         this.name = name;
@@ -15,7 +16,10 @@ public class Animal {
         this.size = size;
         this.weight = weight;
     }
+    //THIS CONSTRUCTOR WAS AUTOMATICALLY GENERATED USING THE CMD+N KEYBINDING. IT CONTAINS ALL THE APPROPRIATE FIELDS AND PARAMETERS.
 
+    public void eat(){}
+    public void move(){}
     public String getName() {
         return name;
     }
@@ -35,4 +39,5 @@ public class Animal {
     public int getWeight() {
         return weight;
     }
+    //ALL GETTERS WERE AUTOMATICALLY GENERATED WITH THE CMD+N KEYBINDING
 }
