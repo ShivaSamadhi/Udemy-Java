@@ -18,8 +18,12 @@ public class Animal {
     }
     //THIS CONSTRUCTOR WAS AUTOMATICALLY GENERATED USING THE CMD+N KEYBINDING. IT CONTAINS ALL THE APPROPRIATE FIELDS AND PARAMETERS.
 
-    public void eat(){}
-    public void move(){}
+    public void eat(){
+        System.out.println("Animal.eat() called");
+    }
+    public void move(int speed){
+        System.out.printf("Animal.move() called. Animal moving at %s", speed);
+    }
     public String getName() {
         return name;
     }

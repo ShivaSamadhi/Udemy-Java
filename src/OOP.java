@@ -56,6 +56,12 @@ public class OOP {
         chase.setPhoneNumber("4693891347");
         System.out.printf("Phone Number: %s%n", chase.getPhoneNumber());
 
+        Animal animal = new Animal("Animal", 1,1,5,5);
 
+        Dog dog = new Dog("Anpu", 5, 5, 2,4, 1, 32, "silky black");
+        dog.eat();
+        //BECAUSE THE EAT METHOD IS A PUBLIC METHOD CREATED WITHIN THE ANIMAL SUPER-CLASS, IT CAN BE INHERITED AND USED BY THE DOG SUBCLASS
+        dog.walk();
+        dog.run();
     }
 }
