@@ -1,4 +1,4 @@
-package src.Computer;
+package src;
 
 public class Motherboard {
     private String model;
