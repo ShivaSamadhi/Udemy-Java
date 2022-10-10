@@ -1,4 +1,4 @@
-package src;
+package src.Vehicle;
 
 public class TLX extends Car {
 

@@ -1,4 +1,4 @@
-package src;
+package src.Vehicle;
 
 public class Vehicle {
     private String name;
