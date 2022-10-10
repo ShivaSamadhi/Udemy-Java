@@ -71,5 +71,8 @@ public class OOP {
         tlx.steer(55);
         tlx.accelerate(50);
         tlx.changeVelocity(10, 60);
+
+       Dimensions dimensions = new Dimensions(20, 20, 5);
+       Case theCase = new Case("A137", "Apple", "Battery")
     }
 }

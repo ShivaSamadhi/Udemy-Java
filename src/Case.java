@@ -31,4 +31,20 @@ public class Case {
     public Dimensions getDimensions() {
         return dimensions;
     }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    public void setPowerSupply(String powerSupply) {
+        this.powerSupply = powerSupply;
+    }
+
+    public void setDimensions(Dimensions dimensions) {
+        this.dimensions = dimensions;
+    }
 }

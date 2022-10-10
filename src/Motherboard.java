@@ -18,6 +18,26 @@ public class Motherboard {
         System.out.printf("%s is now loading...%n", programName);
     }
 
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    public void setRamSlots(int ramSlots) {
+        this.ramSlots = ramSlots;
+    }
+
+    public void setCardSlots(int cardSlots) {
+        this.cardSlots = cardSlots;
+    }
+
+    public void setBios(String bios) {
+        this.bios = bios;
+    }
+
     public String getModel() {
         return model;
     }

@@ -33,4 +33,20 @@ public class Monitor {
     public Resolution getNativeResolution() {
         return nativeResolution;
     }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public void setNativeResolution(Resolution nativeResolution) {
+        this.nativeResolution = nativeResolution;
+    }
 }
