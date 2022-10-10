@@ -5,12 +5,37 @@ package src;
 
 import java.util.Locale;
 
-public class Car {
+public class Car extends Vehicle {
     private int doors;
     private int wheels;
+    private int gears;
+    private boolean isManual;
+    private int currentGear;
     private String model;
     private String engine;
     private String color;
+
+    public Car(String name, String size, int doors, int wheels, int gears, boolean isManual, String model, String engine, String color) {
+        super(name, size);
+        this.doors = doors;
+        this.wheels = wheels;
+        this.gears = gears;
+        this.isManual = isManual;
+        this.currentGear = 1;
+        this.model = model;
+        this.engine = engine;
+        this.color = color;
+    }
+
+    public void changeGear(int currentGear) {
+        this.currentGear = currentGear;
+        System.out.printf("Gear changed to %s gear. Car.changeGear().", currentGear);
+    }
+
+    public void changeVelocity(int speed, int direction){
+        move(speed, direction);
+        System.out.printf("Velocity: %s. Direction: %sº. Car.changeVelocity().");
+    }
 
     public void setModel(String model){
         String validModel = model.toLowerCase();
