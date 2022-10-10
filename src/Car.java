@@ -29,22 +29,18 @@ public class Car extends Vehicle {
 
     public void changeGear(int currentGear) {
         this.currentGear = currentGear;
-        System.out.printf("Gear changed to %s gear. Car.changeGear().", currentGear);
+        System.out.printf("%nGear changed to %s gear. Car.changeGear().%n", currentGear);
     }
 
     public void changeVelocity(int speed, int direction){
         move(speed, direction);
-        System.out.printf("Velocity: %s. Direction: %sº. Car.changeVelocity().");
+        System.out.printf("Velocity: %s. Direction: %sº. Car.changeVelocity().%n", speed, direction);
     }
+
+
 
     public void setModel(String model){
         String validModel = model.toLowerCase();
-        if (validModel.equals("g-wagon")){
-            this.model = model;
-        }
-        else {
-            this.model = "Unknown";
-        }
     }
     //HERE WE ARE CREATING A PUBLIC METHOD BY WHICH WE CAN UPDATE THE MODEL OF OUR CAR OBJ FROM AN EXTERNAL CLASS. 'VOID' IS THE RETURN TYPE AN MEANS THAT OUR METHOD WILL NOT RETURN ANY DATA.
     //METHODS ARE BROKEN INTO 2 TYPES: GET & SET. SO WHEN WE TYPE IN 'SET' AS PART OF THE METHOD NAME, INTELLIJ WILL AUTOCOMPLETE IT BASED ON THE NAMES OF FIELDS THAT HAVE ALREADY BEEN DEFINED WITHIN THIS PARTICULAR CLASS => 'setModel'/'setEngine'
@@ -55,4 +51,5 @@ public class Car extends Vehicle {
         return this.model;
     }
     //HERE WE ARE GETTING INFORMATION BACK FROM THE CAR CLASS ABOUT OUR CAR OBJ BY CREATING A PUBLIC METHOD THAT RETURNS A STRING WITH THE NAME OF THE CAR'S MODEL
+
 }
