@@ -1,12 +1,14 @@
 package src;
 
-public class Moniter {
+public class Monitor {
     private String model;
     private String manufacturer;
     private int size;
     private Resolution nativeResolution;
+    //THE RESOLUTION CLASS IS PART OF THE MONITOR CLASS, BUT INSTEAD OF HAVING THE 'IS A' RELATIONSHIP, THEY SHARE THE 'HAS A' RELATIONSHIP. MEANING 'A MONITOR *HAS A* RESOLUTION'.
+    //THIS IS THE MAIN DIFFERENCE BETWEEN COMPOSITION AND INHERITANCE. COMPOSITION LITERALLY SPEAKS TO FIELDS AND METHODS THAT MAKE UP AN INDIVIDUAL OBJECT. A MONITOR IS A VISUAL DISPLAY, BUT RESOLUTION IS NOT A MONITOR, ITS A QUALITY THAT A MONITOR HAS.
 
-    public Moniter(String model, String manufacturer, int size, Resolution nativeResolution) {
+    public Monitor(String model, String manufacturer, int size, Resolution nativeResolution) {
         this.model = model;
         this.manufacturer = manufacturer;
         this.size = size;
