@@ -72,7 +72,20 @@ public class OOP {
         tlx.accelerate(50);
         tlx.changeVelocity(10, 60);
 
-       Dimensions dimensions = new Dimensions(20, 20, 5);
-       Case theCase = new Case("A137", "Apple", "Battery")
+       Dimensions dimension = new Dimensions(20, 20, 5);
+       Case theCase = new Case("A137", "Apple", "Battery", dimension);
+
+       Monitor monitor = new Monitor("Retina Display", "Apple", 15, new Resolution(2160, 3840));
+
+       Motherboard motherboard = new Motherboard("M2", "Apple", 4, 4, "blah");
+       //FIRST WE CREATE ALL OF THE SUBCLASSES OF OUR COMPOSITION SO THAT ALL OF THE NECESSARY PARAMETERS CAN BE FILLED IN WHEN WE CREATE THE NEW INSTANCE OF OUR MACBOOK PC
+
+       MacBook macBook = new MacBook(theCase, monitor, motherboard, "M2", "Pro", 2021, 9, true);
+       //NEXT WE CAN CREATE THE NEW INSTANCE OF OUR MACBOOK AND PASS IN THE APPROPRIATE INFORMATION
+       // macBook.getMonitor().drawPixelAt(5,6,"Gold");
+        //USING METHOD CHAINING WE CAN ACCESS THE drawPixelAt() METHOD BY USING THE getMonitor() METHOD THAT WAS INHERITED BY THE MACBOOK CLASS FROM THE PC CLASS
+        //macBook.getTheCase().pressPowerBtn();
+        macBook.powerUp();
+        System.out.println();
     }
 }

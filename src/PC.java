@@ -14,17 +14,10 @@ public class PC {
         this.motherboard = motherboard;
     }
 
-    public Case getTheCase() {
-        return theCase;
+    public void powerUp(){
+        theCase.pressPowerBtn();
     }
 
-    public Monitor getMonitor() {
-        return monitor;
-    }
-
-    public Motherboard getMotherboard() {
-        return motherboard;
-    }
 }
 //COMPOSITION HIGHLIGHTS ONE OF THE DRAWBACKS OF STANDARD INHERITANCE, WHICH IS THAT WE CAN ONLY INHERIT FROM ONE CLASS AT A TIME (GREAT WHITE EXTENDS SHARK EXTENDS FISH EXTENDS ANIMAL).
 // COMPOSITION ALLOWS US TO CONNECT MULTIPLE CLASSES INTO ONE OVERALL OBJECT (A PC IS COMPRISED OF A MONITOR, MOTHERBOARD, AND CASE)
