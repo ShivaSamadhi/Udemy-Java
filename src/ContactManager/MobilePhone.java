@@ -59,6 +59,12 @@ public class MobilePhone {
         System.out.printf("%s was deleted", contact.getName());
         return true;
     }
+    public void printContacts(){
+        System.out.println("Contact List");
+        for(int i = 0; i < this.myContacts.size(); i++){
+            System.out.printf("%s. %s -> %s", i+1, this.myContacts.get(i).getName(), this.myContacts.get(i).getPhoneNumber());
+        }
+    }
 
 
 
