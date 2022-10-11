@@ -86,6 +86,8 @@ public class OOP {
         //USING METHOD CHAINING WE CAN ACCESS THE drawPixelAt() METHOD BY USING THE getMonitor() METHOD THAT WAS INHERITED BY THE MACBOOK CLASS FROM THE PC CLASS
         //macBook.getTheCase().pressPowerBtn();
         macBook.powerUp();
-        System.out.println();
+
+        Room livingRoom = new Room(new Area(20, 30), new Walls(7), new Furniture("Couch", 2, false));
+        livingRoom.countWalls();
     }
 }

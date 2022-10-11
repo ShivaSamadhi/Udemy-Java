@@ -1,3 +1,4 @@
+package src;
 public class Walls {
     private int walls;
 

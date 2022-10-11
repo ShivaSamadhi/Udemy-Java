@@ -5,9 +5,12 @@ public class Room {
     private Walls walls;
     private Furniture furniture;
 
-    public Room(Area squareFeet, Walls walls, Furniture furniture) {
-        this.squareFeet = squareFeet;
+    public Room(Area area, Walls walls, Furniture furniture) {
+        this.area = area;
         this.walls = walls;
         this.furniture = furniture;
+    }
+    public void countWalls(){
+        System.out.printf("There are %s walls", walls.getWalls());
     }
 }
