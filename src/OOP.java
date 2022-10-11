@@ -15,9 +15,6 @@ public class OOP {
     //CLASSES ARE SIMPLY TEMPLATES OR BLUEPRINTS FOR THE CREATION OF NEW OBJECTS
     //BY DEFAULT THIS MEANS THAT OBJECTS ARE JUST INSTANCES OF A CLASS THAT ARE BUILT BASED ON THE ORIGINAL TEMPLATE
 
-    //ArrayLists
-    private static Scanner listScanner = new Scanner(System.in);
-    private static GroceryList groceryList = new GroceryList();
 
     public static void main(String[] args) {
         //Car mercedes = new Car();
@@ -94,40 +91,6 @@ public class OOP {
 
         Room livingRoom = new Room(new Area(20, 30), new Walls(7), new Furniture("Couch", 2, false));
         livingRoom.countWalls();
-
-        //ArrayLists
-        boolean quit = false;
-        int choice = 0;
-        printInstructions();
-        while (!quit){
-            System.out.println("Enter your choice: ");
-            choice = listScanner.nextInt();
-            listScanner.nextLine();
-
-            switch (choice) {
-                case 0:
-                    printInstructions();
-                    break;
-                case 1:
-                    groceryList.printGroceryList();
-                    break;
-                case 2:
-                    addItem();
-                    break;
-                case 3:
-                    modifyItem();
-                    break;
-                case 4:
-                    removeItem();
-                    break;
-                case 5:
-                    searchItem();
-                    break;
-                case 6:
-                    quit = true;
-                    break;
-            }
-        }
 
     }
 }
