@@ -13,7 +13,7 @@ public class MobilePhone {
     
     public boolean addNewContact(Contact contact){
         if (findContact(contact.getName()) >= 0) {
-            System.out.println("Contact already exists");
+            System.out.printf("%nContact already exists");
             return false;
         }
         myContacts.add(contact);
@@ -22,7 +22,7 @@ public class MobilePhone {
     public boolean updateContact(Contact oldContact, Contact newContact){
         int foundPosition = findContact(oldContact);
         if(foundPosition < 0){
-            System.out.printf("%s was not found", oldContact.getName());
+            System.out.printf("%s was not found%n", oldContact.getName());
             return false;
         }
         this.myContacts.set(foundPosition, newContact);
@@ -69,7 +69,7 @@ public class MobilePhone {
     public void printContacts(){
         System.out.println("Contact List");
         for(int i = 0; i < this.myContacts.size(); i++){
-            System.out.printf("%s. %s -> %s", i+1, this.myContacts.get(i).getName(), this.myContacts.get(i).getPhoneNumber());
+            System.out.printf("%s. %s -> %s%n", i+1, this.myContacts.get(i).getName(), this.myContacts.get(i).getPhoneNumber());
         }
     }
 
