@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ContactManager {
     private static Scanner scanner = new Scanner(System.in);
-    private static MobilePhone phone = new MobilePhone("4693891347");
+    private static MobilePhone cellPhone = new MobilePhone("4693891347");
 
     public static void main(String[] args) {
         boolean quit = false;
@@ -22,7 +22,7 @@ public class ContactManager {
                     quit = true;
                     break;
                 case 1:
-                    phone.printContacts();
+                    cellPhone.printContacts();
                     break;
                 case 2:
                     addNewContact();
@@ -43,7 +43,49 @@ public class ContactManager {
         }
 
     }
-
+    private static void addNewContact(){
+        System.out.println("Enter New Contact Name: ");
+        String name = scanner.nextLine();
+        System.out.println("Enter Phone Number: ");
+        String phone = scanner.nextLine();
+        Contact newContact = Contact.createContact(name, phone);
+        if(cellPhone.addNewContact(newContact)){
+            System.out.printf("New Contact Added: %s - %s", name, phone);
+        }
+        else {
+            System.out.printf("Cannot add, %s is already on file", name);
+        }
+    }
+    private static void updateContact(){
+        System.out.println("Enter Existing Contact Name: ");
+        String name = scanner.nextLine();
+        Contact existingContact = cellPhone.queryContact(name);
+        if (existingContact == null){
+            System.out.println("Contact Not Found");
+            return;
+        }
+        System.out.print("Enter New Contact Name: ");
+        String newName = scanner.nextLine();
+        System.out.print("Enter New Contact Phone Number: ");
+        String newNumber = scanner.nextLine();
+        Contact newContact = Contact.createContact(newName, newNumber);
+        if(cellPhone.updateContact(existingContact, newContact)){
+            System.out.println("Successfully Updated Contact");
+        }
+        else{
+            System.out.println("Unable To Update Contact");
+        }
+    }
+    private static void removeContact() {
+        System.out.println("Enter Existing Contact Name: ");
+        String name = scanner.nextLine();
+        Contact existingContact = cellPhone.queryContact(name);
+        if (existingContact == null) {
+            System.out.println("Contact Not Found");
+            return;
+        }
+        if (cellPhone.removeContact(existingContact))
+    }
     public static void startPhone(){
         System.out.printf("Starting phone...");
     }
